@@ -19,12 +19,12 @@ public class Main {
         System.out.println("**** ****");
         m.afficher();
         System.out.println("**** ****");
-        int a = m.maximax();
+        int [] a = m.maximax();
         System.out.println("**** ****");
-        int b = m.maximin();
+        int [] b = m.maximin();
         System.out.println("**** ****");
-        int c = m.minRegret();
+        int [] c = m.minRegret();
         System.out.println("**** ****");
-        int d = m.critereHurwicz();
+        int []d = m.critereHurwicz();
     }
 }

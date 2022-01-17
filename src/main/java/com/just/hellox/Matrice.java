@@ -1,4 +1,4 @@
-/*
+  /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -45,7 +45,7 @@ public class Matrice {
             } // end loop (i)
     } // end affiche
     
-    public int maximax(){
+    public int[] maximax(){
         System.out.println("Maximax Agorithme");
         System.out.println();
         int maxLigne ,max = matrice[0][0], line = 0;
@@ -61,15 +61,16 @@ public class Matrice {
                 if (maxLigne > max ){
                     max = maxLigne;
                     line = i;
+                    
                 } // comparisson max maxligne
         } // end i loop
         System.out.println("max is :" + max+ " investe in line " + line);
-        return line;
+        return new int[]{line,max};
     }
     
     // maximin
     
-    public int maximin(){
+    public int[] maximin(){
         System.out.println("Maximin Agorithme");
         System.out.println();
         int minLigne ,max = Integer.MIN_VALUE, line = 0;
@@ -87,10 +88,11 @@ public class Matrice {
                 if (minLigne > max ){
                     max = minLigne;
                     line = i;
+                    
                 } // comparisson max maxligne
         } // end i loop
         System.out.println("max is :" + max +"  invest in line "+ line);
-        return line;
+        return new int[]{line,max};
     }
     // step (1)
     public int[] maxCol(){
@@ -127,9 +129,10 @@ public class Matrice {
     } // end i loop
         return matrice;
     } // end method
-    public int minRegret(){
+    public int[] minRegret(){
         System.out.println("MinRegret Agorithme");
         System.out.println();
+        int i_colomn = 0;
         int maxLigne ,min = Integer.MAX_VALUE, line = 0;
         //step (1)
         int[] list = maxCol(); 
@@ -148,6 +151,7 @@ public class Matrice {
             for(int j = 1; j< coloumn; j++){    
                 if (maxLigne < mat[i][j]){
                     maxLigne = mat[i][j];
+                    i_colomn = j;
                 }    
             } // end j loop
             // Max Ligne
@@ -155,17 +159,19 @@ public class Matrice {
                 if (maxLigne < min ){
                     min = maxLigne;
                     line = i;
+                 
                 } // comparisson max maxligne
         } // end i loop
         System.out.println("max is :" + min+ " investe in line " + line);
-        return line;
+        return new int []{line,matrice[line][i_colomn]};
     } // end minRegret
     
-    public int critereHurwicz(){
+    public int[] critereHurwicz(){
     System.out.println("CritereHurwicz Algorithme");
     System.out.println();    
     int maxLigne, minLigne ,line = 0;
-    double alpha =  0.8,alpha_1, result, max = Double.MIN_VALUE ;
+    int maxl =0,minl = 0;
+    double alpha =  0.5,alpha_1, result, max = Double.MIN_VALUE ;
     alpha_1 = 1- alpha;
     for (int i = 0; i<ligne; i++){
         maxLigne = Integer.MIN_VALUE;
@@ -186,11 +192,13 @@ public class Matrice {
         if (max < result){
             max = result;
             line = i;
+            maxl = maxLigne;
+            minl = minLigne;
         }
     } // end loop i
     System.out.println("max is "+ max + " invest in line "+ line);
     // alpha * max_alt + (1-alpha) * min_alt
-    return line;
+    return new int []{line,maxl,minl};
     }// fin
 
     public int getLigne() {

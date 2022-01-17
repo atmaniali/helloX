@@ -55,6 +55,10 @@ public class Home extends javax.swing.JFrame {
         jminmax = new javax.swing.JLabel();
         jminreg = new javax.swing.JLabel();
         jcrit = new javax.swing.JLabel();
+        valeur_maxi_max = new javax.swing.JLabel();
+        valeur_maximin = new javax.swing.JLabel();
+        valeur_minregret = new javax.swing.JLabel();
+        valeur_crtierh = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,15 +113,35 @@ public class Home extends javax.swing.JFrame {
 
         jmaxmax.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jmaxmax.setForeground(new java.awt.Color(27, 216, 75));
+        jmaxmax.setText("v");
 
         jminmax.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jminmax.setForeground(new java.awt.Color(217, 43, 184));
+        jminmax.setText("v");
 
         jminreg.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jminreg.setForeground(new java.awt.Color(55, 76, 221));
+        jminreg.setText("v");
 
         jcrit.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jcrit.setForeground(new java.awt.Color(238, 27, 30));
+        jcrit.setText("v");
+
+        valeur_maxi_max.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        valeur_maxi_max.setForeground(new java.awt.Color(27, 216, 75));
+        valeur_maxi_max.setText("v");
+
+        valeur_maximin.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        valeur_maximin.setForeground(new java.awt.Color(217, 43, 171));
+        valeur_maximin.setText("v");
+
+        valeur_minregret.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        valeur_minregret.setForeground(new java.awt.Color(55, 76, 221));
+        valeur_minregret.setText("v");
+
+        valeur_crtierh.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        valeur_crtierh.setForeground(new java.awt.Color(238, 27, 30));
+        valeur_crtierh.setText("v");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,49 +154,54 @@ public class Home extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(nombreColomn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nombreLigne, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(42, 42, 42)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jmaxmax)
+                    .addComponent(jminmax)
+                    .addComponent(jminreg)
+                    .addComponent(jcrit))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valeur_minregret)
+                    .addComponent(valeur_crtierh)
+                    .addComponent(valeur_maxi_max)
+                    .addComponent(valeur_maximin))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(503, 503, 503)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(12, 12, 12))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel11)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jminmax))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel12)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jminreg))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jcrit))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jmaxmax)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(88, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(nombreColomn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nombreLigne, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,31 +226,37 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(valeur_maxi_max)
                             .addComponent(jLabel10)
                             .addComponent(jmaxmax))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel11)
-                            .addComponent(jminmax))
+                            .addComponent(jminmax)
+                            .addComponent(valeur_maximin))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel12)
-                            .addComponent(jminreg))
+                            .addComponent(jminreg)
+                            .addComponent(valeur_minregret))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
-                            .addComponent(jcrit)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jcrit)
+                            .addComponent(valeur_crtierh)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(234, 234, 234)
+                        .addComponent(jLabel13)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -252,12 +287,22 @@ public class Home extends javax.swing.JFrame {
                 }
             } // end loop i
             Matrice m = new Matrice(ligne,colomn,matrice);
+            int[] mat = m.maximax(); // return ligne de max and value of max
+            int[] mat_maximin = m.maximin(); // ...
+            int[] mat_min_reg = m.minRegret();
+            int[] mat_cri_her = m.critereHurwicz();
+            
             nombreColomn.setText("");
             nombreLigne.setText("");
-            jmaxmax.setText(String.valueOf(m.maximax()));
-            jminmax.setText(String.valueOf(m.maximin()));
-            jminreg.setText(String.valueOf(m.minRegret()));
-            jcrit.setText(String.valueOf(m.critereHurwicz()));
+            
+            jmaxmax.setText(String.valueOf(mat[0]));
+            valeur_maxi_max.setText(String.valueOf(mat[1]));
+            jminmax.setText(String.valueOf(mat_maximin[0]));
+            valeur_maximin.setText(String.valueOf(mat_maximin[1]));
+            jminreg.setText(String.valueOf(mat_min_reg[0]));
+            valeur_minregret.setText(String.valueOf(mat_min_reg[1]));
+            jcrit.setText(String.valueOf(mat_cri_her[0]));
+            valeur_crtierh.setText(String.valueOf(mat_cri_her[1])+" , "+String.valueOf(mat_cri_her[2]));
             
             
             //JOptionPane.showMessageDialog(rootPane, "line "+m.maximax());
@@ -324,5 +369,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jminreg;
     private javax.swing.JTextField nombreColomn;
     private javax.swing.JTextField nombreLigne;
+    private javax.swing.JLabel valeur_crtierh;
+    private javax.swing.JLabel valeur_maxi_max;
+    private javax.swing.JLabel valeur_maximin;
+    private javax.swing.JLabel valeur_minregret;
     // End of variables declaration//GEN-END:variables
 }
