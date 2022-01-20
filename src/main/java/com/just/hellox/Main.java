@@ -25,6 +25,6 @@ public class Main {
         System.out.println("**** ****");
         int [] c = m.minRegret();
         System.out.println("**** ****");
-        int []d = m.critereHurwicz();
+        double []d = m.critereHurwicz();
     }
 }

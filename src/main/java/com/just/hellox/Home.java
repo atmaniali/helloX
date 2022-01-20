@@ -113,35 +113,27 @@ public class Home extends javax.swing.JFrame {
 
         jmaxmax.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jmaxmax.setForeground(new java.awt.Color(27, 216, 75));
-        jmaxmax.setText("v");
 
         jminmax.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jminmax.setForeground(new java.awt.Color(217, 43, 184));
-        jminmax.setText("v");
 
         jminreg.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jminreg.setForeground(new java.awt.Color(55, 76, 221));
-        jminreg.setText("v");
 
         jcrit.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jcrit.setForeground(new java.awt.Color(238, 27, 30));
-        jcrit.setText("v");
 
         valeur_maxi_max.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         valeur_maxi_max.setForeground(new java.awt.Color(27, 216, 75));
-        valeur_maxi_max.setText("v");
 
         valeur_maximin.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         valeur_maximin.setForeground(new java.awt.Color(217, 43, 171));
-        valeur_maximin.setText("v");
 
         valeur_minregret.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         valeur_minregret.setForeground(new java.awt.Color(55, 76, 221));
-        valeur_minregret.setText("v");
 
         valeur_crtierh.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         valeur_crtierh.setForeground(new java.awt.Color(238, 27, 30));
-        valeur_crtierh.setText("v");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -189,7 +181,7 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(88, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -290,7 +282,7 @@ public class Home extends javax.swing.JFrame {
             int[] mat = m.maximax(); // return ligne de max and value of max
             int[] mat_maximin = m.maximin(); // ...
             int[] mat_min_reg = m.minRegret();
-            int[] mat_cri_her = m.critereHurwicz();
+            double[] mat_cri_her = m.critereHurwicz();
             
             nombreColomn.setText("");
             nombreLigne.setText("");
@@ -301,8 +293,8 @@ public class Home extends javax.swing.JFrame {
             valeur_maximin.setText(String.valueOf(mat_maximin[1]));
             jminreg.setText(String.valueOf(mat_min_reg[0]));
             valeur_minregret.setText(String.valueOf(mat_min_reg[1]));
-            jcrit.setText(String.valueOf(mat_cri_her[0]));
-            valeur_crtierh.setText(String.valueOf(mat_cri_her[1])+" , "+String.valueOf(mat_cri_her[2]));
+            jcrit.setText(String.valueOf((int)mat_cri_her[0]));
+            valeur_crtierh.setText(String.valueOf(mat_cri_her[1]));
             
             
             //JOptionPane.showMessageDialog(rootPane, "line "+m.maximax());

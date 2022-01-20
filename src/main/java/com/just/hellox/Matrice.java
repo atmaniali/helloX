@@ -166,7 +166,7 @@ public class Matrice {
         return new int []{line,matrice[line][i_colomn]};
     } // end minRegret
     
-    public int[] critereHurwicz(){
+    public double[] critereHurwicz(){
     System.out.println("CritereHurwicz Algorithme");
     System.out.println();    
     int maxLigne, minLigne ,line = 0;
@@ -193,12 +193,13 @@ public class Matrice {
             max = result;
             line = i;
             maxl = maxLigne;
+            System.out.println("maximum rh hna "+ maxl);
             minl = minLigne;
         }
     } // end loop i
     System.out.println("max is "+ max + " invest in line "+ line);
     // alpha * max_alt + (1-alpha) * min_alt
-    return new int []{line,maxl,minl};
+    return new double []{line,max};
     }// fin
 
     public int getLigne() {
